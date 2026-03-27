@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Multiplayer</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">HTTP + AJAX long polling</p>
+          <h1>Quiz multiplayer no browser</h1>
+          <p class="hero-copy">
+            Escolhe a tua entrada: o anfitriao cria e controla a sala; os jogadores entram com o codigo
+            e respondem em tempo real.
+          </p>
+        </div>
+        <div class="status-card">
+          <p class="status-label">Stack</p>
+          <p>Node.js, SQLite embutido, HTML, CSS e JavaScript puro.</p>
+        </div>
+      </section>
+
+      <section class="entry-grid">
+        <article class="panel">
+          <p class="status-label">Entrada</p>
+          <h2>Area do anfitriao</h2>
+          <p>Cria a sala, acompanha a leaderboard e faz avancar cada pergunta.</p>
+          <a class="link-button" href="/host">Entrar como anfitriao</a>
+        </article>
+
+        <article class="panel">
+          <p class="status-label">Entrada</p>
+          <h2>Area do jogador</h2>
+          <p>Entra com o codigo da sala, aguarda o arranque e responde dentro do tempo.</p>
+          <a class="link-button secondary-link" href="/player">Entrar como jogador</a>
+        </article>
+      </section>
+    </main>
+  </body>
+  </html>

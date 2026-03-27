@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "text": "Qual e a capital de Portugal?",
+    "options": ["Porto", "Lisboa", "Coimbra", "Faro"],
+    "correctIndex": 1
+  },
+  {
+    "id": 2,
+    "text": "Quantos dias tem um ano bissexto?",
+    "options": ["365", "364", "366", "360"],
+    "correctIndex": 2
+  },
+  {
+    "id": 3,
+    "text": "Qual destes e um navegador web?",
+    "options": ["Linux", "Firefox", "Node.js", "MySQL"],
+    "correctIndex": 1
+  }
+]

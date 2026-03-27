@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogador | Quiz Multiplayer</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Pagina do jogador</p>
+          <h1>Entrar e responder</h1>
+          <p class="hero-copy">
+            Usa o codigo da sala, entra no jogo e acompanha as perguntas em tempo real.
+          </p>
+        </div>
+        <div class="status-card">
+          <p class="status-label">Ligacao</p>
+          <p id="connectionStatus">Aguardando entrada na sala.</p>
+          <p class="mini-link"><a href="/">Voltar ao inicio</a></p>
+        </div>
+      </section>
+
+      <section class="panels">
+        <article class="panel">
+          <h2>Entrar na sala</h2>
+          <form id="joinForm" class="stack">
+            <label>
+              Codigo da sala
+              <input id="joinGameCode" name="gameCode" maxlength="4" placeholder="ABCD" required />
+            </label>
+            <label>
+              Nome do jogador
+              <input id="playerName" name="name" maxlength="20" placeholder="Ex: Joao" required />
+            </label>
+            <button type="submit">Entrar</button>
+          </form>
+
+          <div id="playerSummary" class="stack hidden">
+            <p><strong>Jogador:</strong> <span id="playerSummaryName">-</span></p>
+            <p><strong>Sala:</strong> <span id="playerSummaryCode">-</span></p>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="question-header">
+            <div>
+              <p class="status-label">Pergunta atual</p>
+              <h2 id="questionTitle">Aguardando entrada na sala</h2>
+            </div>
+            <div class="timer">
+              <span>Tempo</span>
+              <strong id="timerValue">--</strong>
+            </div>
+          </div>
+          <div id="questionMeta" class="question-meta">Quando o anfitriao iniciar, a pergunta aparece aqui.</div>
+          <div id="answerOptions" class="answers"></div>
+        </article>
+      </section>
+
+      <section class="game-grid">
+        <article class="panel">
+          <h2>Leaderboard</h2>
+          <ol id="leaderboard" class="leaderboard"></ol>
+        </article>
+
+        <article class="panel">
+          <h2>Atividade</h2>
+          <ul id="activityLog" class="activity-log"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="/shared.js"></script>
+    <script src="/player.js"></script>
+  </body>
+  </html>

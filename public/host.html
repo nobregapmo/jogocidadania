@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anfitriao | Quiz Multiplayer</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Pagina do anfitriao</p>
+          <h1>Controlar a sala</h1>
+          <p class="hero-copy">
+            Cria um jogo, deixa os participantes entrar e conduz o quiz pergunta a pergunta.
+          </p>
+        </div>
+        <div class="status-card">
+          <p class="status-label">Ligacao</p>
+          <p id="connectionStatus">Sem sala ativa.</p>
+          <p class="mini-link"><a href="/">Voltar ao inicio</a></p>
+        </div>
+      </section>
+
+      <section class="panels">
+        <article class="panel">
+          <h2>Nova sala</h2>
+          <form id="createRoomForm" class="stack">
+            <label>
+              Nome do anfitriao
+              <input id="hostName" name="hostName" maxlength="20" placeholder="Ex: Professora Ana" required />
+            </label>
+            <button type="submit">Criar sala</button>
+          </form>
+
+          <div id="hostControls" class="stack hidden">
+            <p><strong>Codigo da sala:</strong> <span id="hostGameCode">-</span></p>
+            <p><strong>Estado:</strong> <span id="roomState">lobby</span></p>
+            <div class="actions">
+              <button id="startGameBtn" type="button">Iniciar jogo</button>
+              <button id="nextQuestionBtn" type="button" class="secondary hidden">Pergunta seguinte</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="question-header">
+            <div>
+              <p class="status-label">Pergunta atual</p>
+              <h2 id="questionTitle">Aguardando criacao da sala</h2>
+            </div>
+            <div class="timer">
+              <span>Tempo</span>
+              <strong id="timerValue">--</strong>
+            </div>
+          </div>
+          <div id="questionMeta" class="question-meta">Os eventos da sala vao aparecer aqui.</div>
+        </article>
+      </section>
+
+      <section class="game-grid">
+        <article class="panel">
+          <h2>Leaderboard</h2>
+          <ol id="leaderboard" class="leaderboard"></ol>
+        </article>
+
+        <article class="panel">
+          <h2>Atividade</h2>
+          <ul id="activityLog" class="activity-log"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="/shared.js"></script>
+    <script src="/host.js"></script>
+  </body>
+  </html>

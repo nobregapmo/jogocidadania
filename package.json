@@ -1,0 +1,9 @@
+{
+  "name": "jogo-cidadania",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quiz multiplayer no browser com HTTP + AJAX long polling",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
