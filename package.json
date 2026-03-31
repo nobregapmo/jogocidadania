@@ -4,6 +4,11 @@
   "private": true,
   "description": "Quiz multiplayer no browser com HTTP + AJAX long polling",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.79.0"
   }
 }
